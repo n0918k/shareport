@@ -56,7 +56,7 @@
   <div class="form-group text-left h3 mt-5">
     <%= f.label :password,class:"mb-4" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %>文字以上)</em>
+    <em>(半角英数<%= @minimum_password_length %>文字以上)</em>
     <% end %>
     <%= f.password_field :password, autocomplete: "new-password",class:"form-control mb-4 input-lg" %>
   </div>

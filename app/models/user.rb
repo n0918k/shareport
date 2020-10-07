@@ -17,9 +17,8 @@ class User < ApplicationRecord
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
 
   def self.guest
-    find_or_create_by!(nickname: 'ゲスト',family_name: '山田',family_name_kana: 'ヤマダ',first_name: '太郎',first_name_kana: 'タロウ',birthday: '1990-01-01', email: 'guest@example.com') do |user|
+    find_or_create_by!(nickname: 'ゲスト', family_name: '山田', family_name_kana: 'ヤマダ', first_name: '太郎', first_name_kana: 'タロウ', birthday: '1990-01-01', email: 'guest@example.com') do |user|
       user.password = 'ccc111'
     end
   end
-
 end
