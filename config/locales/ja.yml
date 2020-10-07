@@ -8,3 +8,8 @@ ja:
        family_name_kana: 姓(カナ)
        first_name_kana: 名(カナ)
        birthday: 誕生日
+     portfolio:
+       name: アプリ名
+       link: リンク
+       description: アプリの説明
+       image: 画像
