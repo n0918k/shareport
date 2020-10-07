@@ -1,0 +1,8 @@
+<%= render 'shared/header'%>
+<div class="container">
+  <% if @portfolios.present?%>
+    <% @portfolios.each do |portfolio|%>
+      <%= portfolio.name%><%= image_tag portfolio.image%>
+    <% end %>
+  <% end %>
+</div>
