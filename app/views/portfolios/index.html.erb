@@ -1,8 +1,44 @@
-<%= render 'shared/header'%>
 <div class="container">
-  <% if @portfolios.present?%>
-    <% @portfolios.each do |portfolio|%>
-      <%= portfolio.name%><%= image_tag portfolio.image%>
-    <% end %>
-  <% end %>
+  <%= render 'shared/header'%>
 </div>
+
+<div class="container d-flex">
+
+  <div class="side-bar ">
+    <div class="side-content-head">
+      <%= link_to root_path do%>
+        <i class="fa fa-home fa-2x ml-2"><span class="ml-3">ホーム</span></i>
+      <% end %>
+    </div>
+    <div class="side-content">
+      <%= link_to "投 稿 す る",new_portfolio_path,class:"btn btn-outline-primary mt-5 btn-lg ml-2"%>
+    </div>
+  </div>
+
+  <div class="contents">
+    <% if @portfolios.present?%>
+      <% @portfolios.each do |portfolio|%>
+        <div class="index-wrapper">
+          <div class="index-image">
+          <%= link_to portfolio.link do%>
+            <%= image_tag portfolio.image,class:"i-image"%>
+          <%end%>
+          </div>
+          <div class="index-box">
+            <div class="index-title">
+              <p class="h3"><%= link_to portfolio.name,portfolio.link,class:"text-dark"%></p>
+            </div>
+            <div class="index-description">
+              <%= portfolio.description%>
+            </div>
+            <div class="index-user-name ">
+              <%= portfolio.user.nickname%>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+

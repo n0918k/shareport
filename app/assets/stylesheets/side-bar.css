@@ -1,0 +1,30 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:30%;
+}
+.index-box{
+  height:100%;
+  width:100%;
+  position: relative;
+}
+
+.side-content-head{
+  margin-top: 10vh;
+}
+
+.side-content{
+  width:100%;
+  text-align: center;
+}
+.index-user-name {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.index-description{
+  white-space: pre-line;
+  height: 70%;
+  overflow: auto;
+}
