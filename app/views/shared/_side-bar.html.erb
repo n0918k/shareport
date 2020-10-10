@@ -1,10 +1,40 @@
-  <div class="side-bar ">
-    <div class="side-content-head">
+  <div class="side-bar justify-content-start">
+    <div class="side-content-head mb-5">
       <%= link_to root_path do%>
-        <i class="fa fa-home fa-2x ml-2"><span class="ml-3">ホーム</span></i>
+        <i class="fa fa-home fa-2x mr-3"><span class="ml-4">ホ ー ム</span></i>
       <% end %>
     </div>
-    <div class="side-content">
-      <%= link_to "投 稿 す る",new_portfolio_path,class:"btn btn-outline-primary mt-5 btn-lg ml-2"%>
+
+    <div class="side-content mt-5 mb-5 ">
+      <% if user_signed_in? %>
+        <%= link_to new_portfolio_path do%>
+          <i class="fa fa-paper-plane fa-2x mr-3 "><span class="ml-3"> 投稿する</span></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_registration_path do%>
+          <i class="fa fa-rocket fa-2x mr-2"><span class="ml-3"> 新規登録</span></i>
+        <% end%>
+      <% end%>
     </div>
+
+    <div class="side-content mt-5 mb-5">
+      <% if user_signed_in? %>
+          <%= link_to destroy_user_session_path,method: :delete do%>
+          <i class="fa fa-power-off fa-2x ml-2"><span class="ml-4">ログアウト</span></i>
+        <% end%>
+      <% else %>
+        <%= link_to new_user_session_path do%>
+          <i class="fa fa-key  fa-2x mr-3"><span class="ml-4">ログイン</span></i>
+        <% end%>
+      <% end%>
+    </div>
+
+    <div class="side-content mt-5 mb-5">
+      <% if user_signed_in? %>
+          <%= link_to favorite_portfolios_path do%>
+          <i class="fa fa-heart fa-2x ml-2"><span class="ml-4">お気に入り</span></i>
+        <% end%>
+      <% end%>
+    </div>
+
   </div>

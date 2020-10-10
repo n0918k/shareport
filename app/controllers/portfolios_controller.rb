@@ -19,6 +19,23 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def destroy
+    portfolio = Portfolio.find(params[:id])
+    if user_signed_in? && current_user.id == portfolio.user_id
+      portfolio.destroy
+      redirect_to root_path
+    else
+      render root_path
+    end
+  end
+
+  def favorite
+    likes = Like.find_by(user_id: current_user.id)
+    if likes.present?
+    @portfolios = Portfolio.all.where(id: likes.portfolio_id)
+    end
+  end
+
   private
 
   def params_portfolio

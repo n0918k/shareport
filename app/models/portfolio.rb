@@ -6,7 +6,7 @@ class Portfolio < ApplicationRecord
 
   with_options presence: true do
     validates :name
-    validates :link
+    validates :link,format: /\A#{URI::regexp(%w(http https))}\z/
     validates :description
     validates :image
   end
