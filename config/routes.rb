@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   end
 
   root 'portfolios#index'
-  resources :portfolios
+  resources :portfolios do
+    collection do
+      get 'favorite'
+    end
+  end
   post   '/like/:portfolio_id' => 'likes#like',   as: 'like'
   delete '/like/:portfolio_id' => 'likes#unlike', as: 'unlike'
 

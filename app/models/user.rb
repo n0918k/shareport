@@ -5,8 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :portfolios, dependent: :destroy
-  has_many :like_stories, through: :likes, source: :portfolio
   has_many :likes, dependent: :destroy
+  has_many :like_portfolios, through: :likes, source: :portfolio
+
+
 
   with_options presence: true do
     validates :nickname
