@@ -1,0 +1,11 @@
+<div class="like-link" id="like-link-<%= portfolio.id %>">
+  <% if current_user.likes.find_by(portfolio_id: portfolio.id) %>
+    <%= link_to unlike_path(portfolio.id), method: :delete, remote: true do %>
+      <div class = "iine__button">❤️ <span class="ml-1"><%= portfolio.likes.count %></span></div>
+    <% end %>
+  <% else %>
+    <%= link_to like_path(portfolio.id), method: :post, remote: true do %>
+      <div class = "iine__button ">♡️ <span class="ml-1"><%= portfolio.likes.count %></span></div>
+    <% end %>
+  <% end %>
+</div>
