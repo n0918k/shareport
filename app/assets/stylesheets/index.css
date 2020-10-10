@@ -30,3 +30,7 @@ overflow: auto;
   max-width:100%;
   align-items: center;
 }
+.index-user-name{
+  align-items: center;
+  justify-content: center;
+}

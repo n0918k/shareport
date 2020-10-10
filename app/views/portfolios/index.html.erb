@@ -31,8 +31,9 @@
             <div class="index-description">
               <%= portfolio.description%>
             </div>
-            <div class="index-user-name ">
+            <div class="index-user-name d-flex">
               <%= portfolio.user.nickname%>
+                <%= render 'shared/like', portfolio: portfolio%>
             </div>
           </div>
         </div>

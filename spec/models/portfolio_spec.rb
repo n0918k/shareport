@@ -14,22 +14,22 @@ RSpec.describe Portfolio, type: :model do
     end
 
     context 'ポートフォリオが登録できないとき' do
-      it 'アプリ名がなければ登録できない'do
+      it 'アプリ名がなければ登録できない' do
         @portfolio.name = nil
         @portfolio.valid?
-        expect(@portfolio.errors.full_messages).to include("アプリ名を入力してください")
+        expect(@portfolio.errors.full_messages).to include('アプリ名を入力してください')
       end
 
       it 'リンクがなければ登録できない' do
         @portfolio.link = nil
         @portfolio.valid?
-        expect(@portfolio.errors.full_messages).to include("リンクを入力してください")
+        expect(@portfolio.errors.full_messages).to include('リンクを入力してください')
       end
 
-      it '画像がなければ登録できない'do
+      it '画像がなければ登録できない' do
         @portfolio.image = nil
         @portfolio.valid?
-        expect(@portfolio.errors.full_messages).to include("画像を入力してください")
+        expect(@portfolio.errors.full_messages).to include('画像を入力してください')
       end
     end
   end
