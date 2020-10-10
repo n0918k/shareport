@@ -1,8 +1,10 @@
-<%= render "shared/header"%>
+<div class="container"><%= render "shared/header"%></div>
 
-<div class="container w-50">
 
-<%= form_with model:@portfolio,url: portfolios_path,method: :post ,local: true  do|f|%>
+<div class="container d-flex">
+  <%= render 'shared/side-bar'%>
+  <div class="new-container">
+    <%= form_with model:@portfolio,url: portfolios_path,method: :post ,local: true  do|f|%>
   <%= render 'shared/error_messages', model: f.object %>
 
   <div class="form-group text-left h3 mt-5">
