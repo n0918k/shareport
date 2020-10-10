@@ -6,7 +6,7 @@
   <%= render 'shared/side-bar'%>
   <div class="contents">
     <% if @portfolios.present?%>
-      <% @portfolios.each do |portfolio|%>
+      <% @portfolios.reverse_each do |portfolio|%>
         <div class="index-wrapper">
           <div class="index-image">
           <%= link_to portfolio.link do%>
