@@ -5,7 +5,11 @@
 <div class="container d-flex">
   <%= render 'shared/side-bar'%>
   <div class="contents">
-    <% if @portfolios.present?%>
+    <% if @portfolios.blank?%>
+
+    <div class="h2 text-center mt-5">お気に入りしたアイテムはありません</div>
+
+    <% else%>
       <% @portfolios.reverse_each do |portfolio|%>
         <div class="index-wrapper">
           <div class="index-image">
