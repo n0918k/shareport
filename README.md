@@ -14,13 +14,13 @@ twitterのようないいね機能と、ログイン中のユーザーがいい�
 
 ***デモ***
 ## ログイン
-![ログイン](app/assets/image/shareport login.mp4.gif)
+![ログイン](app/assets/image/1.gif)
 ## ポートフォリオの登録
-![場所の登録](app/assets/image/shareport new.mp4.gif)
+![場所の登録](app/assets/image/2.gif)
 ## お気に入りの登録
-![商品の登録](app/assets/image/shareport favo.mp4.gif)
+![商品の登録](app/assets/image/3.gif)
 ## ポートフォリオに遷移する
-![商品の検索](app/assets/image/portshare link.mp4.gif)
+![商品の検索](app/assets/image/4.gif)
 
 ## 機能
 
