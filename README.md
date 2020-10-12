@@ -1,5 +1,5 @@
 # README
-# portshare
+# SharePort
 
 ## 作ったアプリを発信り共有したい
 - 開発の経緯
