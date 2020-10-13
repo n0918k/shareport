@@ -31,7 +31,7 @@ twitterのようないいね機能と、ログイン中のユーザーがいい�
 
 ## デプロイ
 
-1. Heroku(https://docosukagram.herokuapp.com/)</br>
+1. Heroku(https://shareport.herokuapp.com/)</br>
 
 
 ## その他
