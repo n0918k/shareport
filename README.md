@@ -16,18 +16,18 @@ twitterのようないいね機能と、ログイン中のユーザーがいい�
 ## ログイン
 ![ログイン](app/assets/image/1.gif)
 ## ポートフォリオの登録
-![場所の登録](app/assets/image/2.gif)
+![ポートフォリオの登録](app/assets/image/2.gif)
 ## お気に入りの登録
-![商品の登録](app/assets/image/3.gif)
+![お気に入りの登録](app/assets/image/3.gif)
 ## ポートフォリオに遷移する
-![商品の検索](app/assets/image/4.gif)
+![ポートフォリオに遷移する](app/assets/image/4.gif)
 
 ## 機能
 
 - ユーザー登録
-- 場所の登録
-- 商品の登録
-- 検索機能
+- ポートフォリオの登録
+- お気に入りの登録
+- ポートフォリオに遷移する
 
 ## デプロイ
 
